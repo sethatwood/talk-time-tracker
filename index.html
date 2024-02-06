@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk Time Tracker</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .timer {
+            font-size: 120px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .btn-reset {
+            font-size: 24px;
+            padding: 10px 20px;
+            width: 50%;
+        }
+        #timeInput {
+            width: 200px;
+            margin: 20px auto;
+            display: block;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <div class="timer" id="timer">90</div>
+        <button class="btn btn-primary btn-lg btn-reset" type="button" id="reset-button">Reset</button>
+        <input type="number" class="form-control" placeholder="Set timer (seconds)" id="timeInput" aria-label="Set timer">
+    </div>
+
+    <script>
+        let countdown;
+        let time = 90;
+
+        function updateTimer() {
+            const timerElement = document.getElementById('timer');
+            timerElement.textContent = Math.abs(time);
+            timerElement.style.color = time <= 0 ? '#ff1f02' : ''; 
+
+            time--;
+        }
+
+        function startTimer() {
+            clearInterval(countdown);
+            time = parseInt(document.getElementById('timeInput').value) || 90;
+            updateTimer();
+            countdown = setInterval(updateTimer, 1000);
+        }
+
+        document.getElementById('reset-button').addEventListener('click', startTimer); // Reset button functionality
+
+        window.onload = startTimer;
+    </script>
+</body>
+</html>
