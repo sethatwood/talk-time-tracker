@@ -47,9 +47,16 @@
         function updateTimer() {
             const timerElement = document.getElementById('timer');
             timerElement.textContent = Math.abs(time);
-            timerElement.style.color = time <= 0 ? '#ff1f02' : ''; 
 
-            time--;
+            if (time <= 0) {
+                timerElement.style.color = '#ff1f02';
+            } else if (time <= 30) {
+                timerElement.style.color = '#ffcc00';
+            } else {
+                timerElement.style.color = '';
+            }
+
+            time--; // Decrement time
         }
 
         function startTimer() {
