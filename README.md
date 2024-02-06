@@ -18,7 +18,7 @@ In a world where time flies, especially when you're talking, we often lose track
 
 ### Getting Started
 
-1. **Visit the App**: Simply go to `https://sethatwood.github.io/talk-time-tracker/` to start using Talk Time Tracker.
+1. **Visit the App**: Simply go to [https://sethatwood.github.io/talk-time-tracker/](https://sethatwood.github.io/talk-time-tracker/) to start using Talk Time Tracker.
 2. **Set Your Time**: Use the default 90 seconds or adjust to your preference.
 3. **Talk Away**: Keep an eye on the timer, and wrap up when it turns red. If you go over, no worries, just see how far you've gone and try to do better next time.
 4. **Reset and Repeat**: Hit the big reset button to start again.
