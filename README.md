@@ -12,7 +12,7 @@ In a world where time flies, especially when you're talking, we often lose track
 
 - **Simple Setup**: Get started in seconds. No complicated configurations needed.
 - **Customizable Countdown**: Default set to 90 seconds, but easily adjustable for any talk length.
-- **Visual Cue**: Timer turns red when you've exceeded your time, because sometimes, you just need a clear sign.
+- **Visual Cue**: Timer turns yellow in the final 30 seconds, signaling you to start wrapping up. It then turns red when you've exceeded your time, providing a clear visual indicator to conclude.
 - **Immediate Reset**: Big reset button to quickly start over for your next practice or speech segment.
 - **Dark Mode**: Easy on the eyes, perfect for late-night practice sessions or if you're just a fan of dark mode.
 
