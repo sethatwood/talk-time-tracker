@@ -100,9 +100,11 @@
     }
 
     function resetTimer() {
-      time = 90;
-      document.getElementById("timeInput").value = time;
-      startTimer();
+      const inputValue = parseInt(document.getElementById("timeInput").value);
+      time = isNaN(inputValue) ? 90 : inputValue;
+      clearInterval(countdown);
+      updateTimer();
+      countdown = setInterval(updateTimer, 1000);
     }
 
     document.getElementById("reset-button").addEventListener("click", resetTimer);
